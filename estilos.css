@@ -1,1 +1,156 @@
+/*PC*/
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
 
+nav ul li {
+    position: relative;
+    width: 100%;
+}
+
+nav ul li ul {
+    display: none;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    flex-direction: row;
+}
+
+nav ul li:hover ul {
+    display: flex;
+}
+
+nav ul li ul li {
+    padding: 10px;
+}
+
+nav ul li ul li:hover {
+    background-color: #f0f0f0;
+}
+
+
+section {
+    text-align: left;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.tarjeta {
+    width: 500px;
+    text-align: center;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: auto;
+}
+
+/* Celular */
+@media screen and (max-width: 768px){
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 10px;
+    }
+
+    nav ul li {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    nav ul li ul {
+        position: static;
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        box-shadow: none;
+        margin-left: 15px;
+    }
+
+    nav ul li:hover ul {
+        display: flex;
+    }
+    h1{
+        text-align: center;
+    }
+
+    section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tarjeta {
+        width: 90%;
+        max-width: 400px;
+    }
+}
+
+/* tablet */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+
+    nav ul li {
+        position: relative;
+        width: 100%;
+    }
+
+    nav ul li ul {
+        display: none;
+        list-style: none;
+        padding: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        flex-direction: row;
+    }
+
+    nav ul li:hover ul {
+        display: flex;
+    }
+
+    nav ul li ul li {
+        padding: 10px;
+    }
+
+    nav ul li ul li:hover {
+        background-color: #f0f0f0;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: left;
+        gap: 20px;
+    }
+
+    .tarjeta {
+        flex: 1 1 calc(50% - 40px);
+        max-width: 400px;
+    }
+}
